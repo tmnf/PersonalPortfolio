@@ -1,12 +1,11 @@
-from django.shortcuts import render, redirect
-from django.urls import reverse
+from datetime import date
+
+from dateutil.relativedelta import relativedelta
 from django.contrib import messages
+from django.shortcuts import render, redirect
 
 from main_app.models import Contact, Project, Profile, File, Languages, Frameworks, OtherSkills
 from .Utils import CONSTANTS, EmailUtils
-
-from dateutil.relativedelta import relativedelta
-from datetime import date
 
 
 # Create your views here.
@@ -61,7 +60,8 @@ def contacts(request):
 def skills(request):
     skill_list = {"languages": Languages.objects.all(),
                   "frameworks": Frameworks.objects.all(),
-                  "other_skills": OtherSkills.objects.all()
+                  "other_skills": OtherSkills.objects.all(),
+                  "active": "skills",
                   }
 
     return render(request, "SkillsPage.html", skill_list)
