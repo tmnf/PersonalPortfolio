@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página de apresentação de portfólio">
+    <meta name="keywords" content="Tiago Farinha, Java, Python, Django, Android">
+    <meta name="author" content="Tiago Farinha">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/laptop.ico' %}"/>
+
+    <style>
+        @font-face {
+            font-family: 'Bookman Old Style';
+            src: local('Bookman Old Style'),
+            url('{% static 'fonts/bookman.TTF' %}');
+        }
+    </style>
+
+    <title> {% block title %}{% endblock %} </title>
+</head>
+
+<body>
+<header>
+    <section class="title">
+        <h1> Tiago Farinha </h1>
+        <p> Computer Science Student </p>
+    </section>
+    <nav class="top_menu_bar">
+        <ul>
+            <li><a {% if active == 'home' %} class="active" {% endif %} href="{% url 'home_view' %}"> Inicio </a></li>
+            <li><a {% if active == 'portfolio' %} class="active" {% endif %} href="{% url 'portfolio_view' %}">
+                Portfolio </a>
+            </li>
+            <li><a {% if active == 'skills' %} class="active" {% endif %} href="{% url 'skills_view' %}">
+                Competencias </a>
+            </li>
+            <li><a {% if active == 'contacts' %} class="active" {% endif %} href="{% url 'contacts_view' %}">
+                Contactos </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container">
+    {% block content %}{% endblock content %}
+</section>
+</body>
+</html>

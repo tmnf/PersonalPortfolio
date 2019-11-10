@@ -1,0 +1,34 @@
+{% extends "DefaultPage.html" %}
+
+{% block title %} Competências {% endblock %}
+
+{% block content %}
+    <section class="skills_style">
+        <div class="languages_style">
+            <h2> Linguagens de Progamação </h2>
+            <ul>
+                {% for language in languages %}
+                    <li> {{ language.name }} <p>({{ language.level }})</p></li>
+                {% endfor %}
+            </ul>
+
+        </div>
+        <div class="frameworks_style">
+            <h2> Frameworks </h2>
+            <ul>
+                {% for framework in frameworks %}
+                    <li> {{ framework.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="other_skills_style">
+            <h2> Informáticas </h2>
+            <ul>
+                {% for other in other_skills %}
+                    <li> {{ other.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends "DefaultPage.html" %}
+{% load staticfiles %}
+
+{% block title %} Página Inicial - TF {% endblock %}
+
+{% block content %}
+    {% for message in messages %}
+        <p class="success_message" id="message_container"> {{ message }} </p>
+    {% endfor %}
+
+    <section class="profile_style">
+        <picture class="profile_pic">
+            <img src="{{ profile.profile_pic.url }}" alt="Foto de Perfil">
+        </picture>
+
+        <section class="informations">
+            <h3> {{ profile.name }}</h3>
+            <h3> {{ profile.address }}</h3>
+            <h3> {{ profile.job_interest }}</h3>
+            <h3> {{ age }} Anos </h3>
+        </section>
+
+        <p class="description"> {{ profile.biography }} </p>
+    </section>
+
+    <section class="social_skills">
+        <h4> Social Skills </h4>
+        <ul>
+            {% for skill in profile.socialskill_set.all %}
+                <li> {{ skill.skill }} </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="contact_and_files">
+        <div class="send_message_style">
+            <h4> Contacto </h4>
+            <form action="{% url 'send_email_view' %}" method="post">{% csrf_token %}
+                <input type="text" placeholder="Nome" name="name">
+                <input type="email" placeholder="Email" name="email">
+                <input type="text" placeholder="Assunto" name="subject">
+                <textarea class="message_box" name="message" rows="10" cols="30" placeholder="Mensagem"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="anexos">
+            <h4> Anexos </h4>
+            {% for file in files %}
+                <label> {{ file.label }}: </label>
+                <a href="{{ file.file.url }}" download="{{ file.label }}_Tiago_Farinha">
+                    <button class="downbutt"> Download</button>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+
+    <script>
+        setTimeout(function () {
+            document.getElementById("message_container").style.display = "none";
+        }, 2000);
+    </script>
+{% endblock content %}
