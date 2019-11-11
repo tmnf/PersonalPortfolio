@@ -1,31 +1,29 @@
 {% extends "DefaultPage.html" %}
 
-{% block title %} Contatos {% endblock %}
+{% block title %} {{ contacts }} {% endblock %}
 
 {% block content %}
     <section class="contacts_style">
         <div class="left_contacts">
             <div>
                 <h3> Email </h3>
-                <p> {{ email }} </p>
+                <a href="mailto:{{ email }}" target="_top"> {{ email }} </a>
             </div>
             <div>
-                <h3> Phone </h3>
-                <p> {{ phone }}</p>
+                <h3> {{ phone_text }} </h3>
+                <a href="tel:+351{{ phone }}" target="_top"> {{ phone }}</a>
             </div>
 
         </div>
         <div class="right_contacts">
             <div>
-                <h3> Linkedin </h3>
+                <h3> LinkedIn </h3>
                 <a target="_blank" href= {{ linkedin }}>  {{ linkedin }} </a>
             </div>
 
-            <h3> Github </h3>
+            <h3> GitHub </h3>
             <a target="_blank" href= {{ github }}>  {{ github }} </a>
 
         </div>
-
-
     </section>
 {% endblock content %}

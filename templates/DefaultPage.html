@@ -27,19 +27,29 @@
 <header>
     <section class="title">
         <h1> Tiago Farinha </h1>
-        <p> Computer Science Student </p>
+        <p> {{ curr_job }} </p>
     </section>
+
+    <section class="languages_change">
+        {% if request.session.lang == 'pt' %}
+            <a href="{% url 'change_lang_view' %}"> Switch to English </a>
+        {% else %}
+            <a href="{% url 'change_lang_view' %}"> Mudar para Português </a>
+        {% endif %}
+    </section>
+
     <nav class="top_menu_bar" id="myTopnav">
         <ul>
-            <li><a {% if active == 'home' %} class="active" {% endif %} href="{% url 'home_view' %}"> Inicio </a></li>
+            <li><a {% if active == 'home' %} class="active" {% endif %} href="{% url 'home_view' %}"> {{ home }} </a>
+            </li>
             <li><a {% if active == 'portfolio' %} class="active" {% endif %} href="{% url 'portfolio_view' %}">
-                Portfolio </a>
+                {{ portfolio }} </a>
             </li>
             <li><a {% if active == 'skills' %} class="active" {% endif %} href="{% url 'skills_view' %}">
-                Competencias </a>
+                {{ skills }} </a>
             </li>
             <li><a {% if active == 'contacts' %} class="active" {% endif %} href="{% url 'contacts_view' %}">
-                Contactos </a>
+                {{ contacts }} </a>
             </li>
             <div class="icon" onclick="myFunction(this)">
                 <div class="bar1"></div>

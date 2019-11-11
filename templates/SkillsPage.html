@@ -1,17 +1,16 @@
 {% extends "DefaultPage.html" %}
 
-{% block title %} Competências {% endblock %}
+{% block title %} {{ skills }} {% endblock %}
 
 {% block content %}
     <section class="skills_style">
         <div class="languages_style">
-            <h2> Linguagens de Progamação </h2>
+            <h2> {{ languages_text }} </h2>
             <ul>
                 {% for language in languages %}
                     <li> {{ language.name }} <p>({{ language.level }})</p></li>
                 {% endfor %}
             </ul>
-
         </div>
         <div class="frameworks_style">
             <h2> Frameworks </h2>
@@ -22,7 +21,7 @@
             </ul>
         </div>
         <div class="other_skills_style">
-            <h2> Informáticas </h2>
+            <h2> {{ other_skills_text }} </h2>
             <ul>
                 {% for other in other_skills %}
                     <li> {{ other.name }}</li>
@@ -30,5 +29,4 @@
             </ul>
         </div>
     </section>
-
 {% endblock content %}

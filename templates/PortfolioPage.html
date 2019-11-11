@@ -1,7 +1,7 @@
 {% extends "DefaultPage.html" %}
 {% load static %}
 
-{% block title %} Portfolio {% endblock %}
+{% block title %} {{ portfolio }} {% endblock %}
 
 {% block content %}
     <section class="project_style">
@@ -20,7 +20,7 @@
             <p class="proj_descr"> {{ proj.project_descr }} </p>
 
             <div class="proj_ref">
-                <h2> Referencias </h2>
+                <h2> {{ references }} </h2>
                 {% for ref in proj.reference_set.all %}
                     <a target="_blank" href="{{ ref.reference_url }}"> {{ ref.reference_name }} </a>
                 {% endfor %}

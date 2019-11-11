@@ -1,7 +1,7 @@
 {% extends "DefaultPage.html" %}
 {% load staticfiles %}
 
-{% block title %} Página Inicial - TF {% endblock %}
+{% block title %} {{ main_page }} - TF {% endblock %}
 
 {% block content %}
     {% for message in messages %}
@@ -24,7 +24,7 @@
     </section>
 
     <section class="social_skills">
-        <h4> Social Skills </h4>
+        <h4> Soft Skills </h4>
         <ul>
             {% for skill in profile.socialskill_set.all %}
                 <li> {{ skill.skill }} </li>
@@ -34,17 +34,17 @@
 
     <section class="contact_and_files">
         <div class="send_message_style">
-            <h4> Contacto </h4>
+            <h4> {{ contact }} </h4>
             <form action="{% url 'send_email_view' %}" method="post">{% csrf_token %}
-                <input type="text" placeholder="Nome" name="name">
-                <input type="email" placeholder="Email" name="email">
-                <input type="text" placeholder="Assunto" name="subject">
-                <textarea class="message_box" name="message" rows="10" cols="30" placeholder="Mensagem"></textarea>
-                <input type="submit" value="Enviar">
+                <input type="text" placeholder="{{ name }}" name="name">
+                <input type="email" placeholder="{{ contact_email }}" name="email">
+                <input type="text" placeholder="{{ subject }}" name="subject">
+                <textarea class="message_box" name="message" rows="10" cols="30" placeholder="{{ message }}"></textarea>
+                <input type="submit" value="{{ send }}">
             </form>
         </div>
         <div class="anexos">
-            <h4> Anexos </h4>
+            <h4> {{ attachments }} </h4>
             {% for file in files %}
                 <label> {{ file.label }}: </label>
                 <a href="{{ file.file.url }}" download="{{ file.label }}_Tiago_Farinha">

@@ -6,10 +6,10 @@ from django.shortcuts import render, redirect
 
 from main_app.models import Contact, Project, Profile, File, Languages, Frameworks, OtherSkills
 from .Utils import CONSTANTS, EmailUtils
+from .Utils import LanguageUtils
 
 
 # Create your views here.
-
 
 def index(request):
     profile = Profile.objects.get(pk=1)
@@ -23,7 +23,21 @@ def index(request):
             "files": File.objects.all(),
             }
 
+    info = {**info, **LanguageUtils.get_base_words(request)}
+
     return render(request, "IndexPage.html", info)
+
+
+def change_lang(request):
+    if request.session['lang']:
+        if request.session['lang'] == 'pt':
+            request.session['lang'] = 'en'
+        else:
+            request.session['lang'] = 'pt'
+    else:
+        request.session['lang'] = 'pt'
+
+    return redirect('home_view')
 
 
 def send_email(request):
@@ -54,6 +68,8 @@ def contacts(request):
         "active": "contacts"
     }
 
+    conts = {**conts, **LanguageUtils.get_base_words(request)}
+
     return render(request, "ContactsPage.html", conts)
 
 
@@ -64,6 +80,8 @@ def skills(request):
                   "active": "skills",
                   }
 
+    skill_list = {**skill_list, **LanguageUtils.get_base_words(request)}
+
     return render(request, "SkillsPage.html", skill_list)
 
 
@@ -72,5 +90,7 @@ def portfolio(request):
         "projects": Project.objects.all(),
         "active": "portfolio"
     }
+
+    projects = {**projects, **LanguageUtils.get_base_words(request)}
 
     return render(request, "PortfolioPage.html", projects)
