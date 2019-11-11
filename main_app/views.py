@@ -39,6 +39,7 @@ def change_lang(request):
 
     if request.session['lang'] == 'pt':
         request.session['lang'] = 'en'
+        messages.success(request, "Some texts might be in another language...")
     else:
         request.session['lang'] = 'pt'
 
