@@ -336,6 +336,7 @@ body {
 
     .top_menu_bar.responsive ul li a {
         display: block;
+        margin-bottom: 10px;
     }
 
     .top_menu_bar.responsive .bar1 {
