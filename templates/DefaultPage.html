@@ -29,7 +29,7 @@
         <h1> Tiago Farinha </h1>
         <p> Computer Science Student </p>
     </section>
-    <nav class="top_menu_bar">
+    <nav class="top_menu_bar" id="myTopnav">
         <ul>
             <li><a {% if active == 'home' %} class="active" {% endif %} href="{% url 'home_view' %}"> Inicio </a></li>
             <li><a {% if active == 'portfolio' %} class="active" {% endif %} href="{% url 'portfolio_view' %}">
@@ -41,6 +41,11 @@
             <li><a {% if active == 'contacts' %} class="active" {% endif %} href="{% url 'contacts_view' %}">
                 Contactos </a>
             </li>
+            <div class="icon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </ul>
     </nav>
 </header>
@@ -49,4 +54,15 @@
     {% block content %}{% endblock content %}
 </section>
 </body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "top_menu_bar") {
+            x.className += " responsive";
+        } else {
+            x.className = "top_menu_bar";
+        }
+    }
+</script>
 </html>

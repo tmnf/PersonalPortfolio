@@ -27,6 +27,10 @@ body {
     margin-bottom: 20px;
 }
 
+.top_menu_bar .icon {
+    display: none;
+}
+
 .top_menu_bar ul {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -35,8 +39,8 @@ body {
 }
 
 .top_menu_bar ul li {
-    display: inline;
     font-size: 20px;
+    display: inline;
 }
 
 .top_menu_bar ul li a {
@@ -318,12 +322,72 @@ body {
     color: blue;
 }
 
-
 /* RESPONSIVE HANDLE */
 
 @media (max-width: 768px) {
     .container {
         width: 100%;
+    }
+
+    .top_menu_bar.responsive ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top_menu_bar.responsive ul li a {
+        display: block;
+    }
+
+    .top_menu_bar.responsive .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .top_menu_bar.responsive .bar2 {
+        opacity: 0;
+    }
+
+    .top_menu_bar.responsive .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .top_menu_bar {
+        overflow: hidden;
+    }
+
+    .top_menu_bar ul li {
+        width: 100%;
+    }
+
+    .top_menu_bar ul li a {
+        display: none;
+    }
+
+    .top_menu_bar .icon {
+        float: right;
+        display: block;
+        cursor: pointer;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .top_menu_bar .icon:hover {
+        background-color: #555555bb;
+        border-radius: 10px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .top_menu_bar .menu_but {
+        background: url("images/menu.ico");
+        background-size: 100px;
     }
 
     .profile_style {
@@ -378,15 +442,6 @@ body {
         width: 90%;
     }
 
-    .top_menu_bar ul li {
-        width: 100%;
-        display: inline-block;
-    }
-
-    .top_menu_bar .icon {
-        display: none;
-    }
-
     .page_normal_title h1 {
         font-size: 25px;
     }
@@ -433,6 +488,7 @@ body {
         width: 100%;
         margin: 0;
     }
+
 }
 
 
