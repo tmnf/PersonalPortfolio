@@ -12,6 +12,7 @@ from .Utils import LanguageUtils
 # Create your views here.
 
 def index(request):
+    checkLanguage(request)
     profile = Profile.objects.get(pk=1)
 
     birth = date(profile.birthday.year, profile.birthday.month, profile.birthday.day)
@@ -28,12 +29,16 @@ def index(request):
     return render(request, "IndexPage.html", info)
 
 
+def checkLanguage(request):
+    if not request.session['lang']:
+        request.session['lang'] = 'pt'
+
+
 def change_lang(request):
-    if request.session['lang']:
-        if request.session['lang'] == 'pt':
-            request.session['lang'] = 'en'
-        else:
-            request.session['lang'] = 'pt'
+    checkLanguage(request)
+
+    if request.session['lang'] == 'pt':
+        request.session['lang'] = 'en'
     else:
         request.session['lang'] = 'pt'
 
@@ -41,6 +46,7 @@ def change_lang(request):
 
 
 def send_email(request):
+    checkLanguage(request)
     name = request.POST.get('name')
     subject = request.POST.get('subject')
     message = request.POST.get('message')
@@ -60,6 +66,7 @@ def send_email(request):
 
 
 def contacts(request):
+    checkLanguage(request)
     conts = {
         "email": Contact.objects.get(contact_type=CONSTANTS.EMAIL).contact_info,
         "phone": Contact.objects.get(contact_type=CONSTANTS.PHONE).contact_info,
@@ -74,6 +81,7 @@ def contacts(request):
 
 
 def skills(request):
+    checkLanguage(request)
     skill_list = {"languages": Languages.objects.all(),
                   "frameworks": Frameworks.objects.all(),
                   "other_skills": OtherSkills.objects.all(),
@@ -86,6 +94,7 @@ def skills(request):
 
 
 def portfolio(request):
+    checkLanguage(request)
     projects = {
         "projects": Project.objects.all(),
         "active": "portfolio"

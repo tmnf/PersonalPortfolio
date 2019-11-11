@@ -31,10 +31,12 @@
     </section>
 
     <section class="languages_change">
-        {% if request.session.lang == 'pt' %}
-            <a href="{% url 'change_lang_view' %}"> Switch to English </a>
-        {% else %}
-            <a href="{% url 'change_lang_view' %}"> Mudar para Português </a>
+        {% if active == 'home' %}
+            {% if request.session.lang == 'pt' %}
+                <a href="{% url 'change_lang_view' %}"> Switch to English </a>
+            {% else %}
+                <a href="{% url 'change_lang_view' %}"> Mudar para Português </a>
+            {% endif %}
         {% endif %}
     </section>
 
