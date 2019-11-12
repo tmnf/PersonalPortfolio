@@ -1,4 +1,5 @@
 from django.db import models
+
 from .Utils import CONSTANTS
 
 
@@ -15,7 +16,8 @@ class Contact(models.Model):
 
 class Project(models.Model):
     project_name = models.CharField(max_length=100)
-    project_descr = models.CharField(max_length=5000)
+    project_descr = models.TextField()
+    functionalities = models.TextField(default="")
 
     def __str__(self):
         return self.project_name
@@ -43,7 +45,7 @@ class Profile(models.Model):
     address = models.CharField(max_length=200)
     job_interest = models.CharField(max_length=200)
     birthday = models.DateField()
-    biography = models.CharField(max_length=1000)
+    biography = models.TextField()
     profile_pic = models.ImageField(upload_to="./main_app/media")
 
     def __str__(self):
