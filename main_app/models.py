@@ -72,20 +72,31 @@ class File(models.Model):
 class Languages(models.Model):
     name = models.CharField(max_length=100)
     level = models.CharField(max_length=100)
+    priority = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return self.name + " - " + str(self.priority)
 
 
 class Frameworks(models.Model):
     name = models.CharField(max_length=100)
+    priority = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return self.name + " - " + str(self.priority)
 
 
 class OtherSkills(models.Model):
     name = models.CharField(max_length=150)
+    priority = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.name
+        return self.name + " - " + str(self.priority)
+
+
+class SpokenLanguage(models.Model):
+    language = models.CharField(max_length=150)
+    level = models.CharField(max_length=150)
+
+    def __str__(self):
+        return self.language

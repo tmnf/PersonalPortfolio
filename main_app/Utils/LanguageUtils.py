@@ -15,6 +15,7 @@ def get_base_words(request):
         send = 'Send'
         references = 'References'
         languages_text = 'Programming Languages'
+        spoken_languages_text = 'Spoken Languages'
         other_skills_text = 'Other Skills'
         phone_text = 'Phone'
     else:
@@ -33,6 +34,7 @@ def get_base_words(request):
         send = 'Enviar'
         references = 'Referências'
         languages_text = 'Linguagens de Programação'
+        spoken_languages_text = 'Idiomas Falados'
         other_skills_text = 'Outras Competências'
         phone_text = 'Telemóvel'
 
@@ -41,4 +43,5 @@ def get_base_words(request):
             "contact": contact, "attachments": attachments, "name": name, "contact_email": contact_email,
             "subject": subject, "message": message, "send": send, "references": references,
             "languages_text": languages_text,
-            "other_skills_text": other_skills_text, "phone_text": phone_text}
+            "other_skills_text": other_skills_text, "phone_text": phone_text,
+            "spoken_languages_text": spoken_languages_text}

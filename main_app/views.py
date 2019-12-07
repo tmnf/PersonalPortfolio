@@ -4,7 +4,7 @@ from dateutil.relativedelta import relativedelta
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
-from main_app.models import Contact, Project, Profile, File, Languages, Frameworks, OtherSkills
+from main_app.models import Contact, Project, Profile, File, Languages, Frameworks, OtherSkills, SpokenLanguage
 from .Utils import CONSTANTS, EmailUtils
 from .Utils import LanguageUtils
 
@@ -24,6 +24,7 @@ def index(request):
             "age": age,
             "active": "home",
             "files": File.objects.all(),
+            "spoken_languages": SpokenLanguage.objects.all()
             }
 
     info = {**info, **LanguageUtils.get_base_words(request)}
@@ -88,9 +89,10 @@ def contacts(request):
 
 def skills(request):
     check_language(request)
-    skill_list = {"languages": Languages.objects.all(),
-                  "frameworks": Frameworks.objects.all(),
-                  "other_skills": OtherSkills.objects.all(),
+
+    skill_list = {"languages": Languages.objects.all().order_by('priority'),
+                  "frameworks": Frameworks.objects.all().order_by('priority'),
+                  "other_skills": OtherSkills.objects.all().order_by('priority'),
                   "active": "skills",
                   }
 

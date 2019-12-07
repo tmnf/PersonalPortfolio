@@ -138,6 +138,13 @@ body {
     font-size: 20px;
 }
 
+.social_skills ul li p {
+    font-size: 14px;
+    color: #999999;
+    display: inline-block;
+    margin: 0;
+}
+
 .contact_and_files {
     background-color: #111111aa;
     border-radius: 20px;
@@ -287,10 +294,11 @@ body {
     background-color: #111111aa;
     border-radius: 20px;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .proj_name {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .proj_pics {
@@ -304,16 +312,21 @@ body {
 
 .proj_pics img {
     width: 30%;
-    margin: 1%;
+    margin: 1% 1% 40px 1%;
     border-radius: 20px;
 }
 
 .proj_descr {
-    font-size: 18px;
+    font-size: 16px;
     width: 95%;
     text-align: justify;
     margin: auto;
     white-space: pre-wrap;
+}
+
+.proj_funcs {
+    font-size: 16px;
+    font-family: "Bookman Old Style";
 }
 
 .proj_ref {

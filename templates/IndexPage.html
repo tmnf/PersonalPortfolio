@@ -32,6 +32,17 @@
         </ul>
     </section>
 
+    <section class="social_skills">
+        <h4> {{ spoken_languages_text }} </h4>
+        <ul>
+            {% for spoken_language in spoken_languages %}
+                <li> {{ spoken_language.language }}
+                    <p>({{ spoken_language.level }})</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
     <section class="contact_and_files">
         <div class="send_message_style">
             <h4> {{ contact }} </h4>

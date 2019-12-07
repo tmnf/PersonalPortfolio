@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from . import models
 
 # Register your models here.
@@ -13,3 +14,4 @@ admin.site.register(models.SocialSkill)
 admin.site.register(models.Languages)
 admin.site.register(models.Frameworks)
 admin.site.register(models.OtherSkills)
+admin.site.register(models.SpokenLanguage)
