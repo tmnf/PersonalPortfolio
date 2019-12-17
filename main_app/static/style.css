@@ -68,12 +68,12 @@ body {
 }
 
 .top_menu_bar ul li a:hover {
-    background-color: #555555bb;
+    background-color: #222222dd;
     border-radius: 10px;
 }
 
 .active {
-    background-color: #555555bb;
+    background-color: #222222dd;
     border-radius: 10px;
 }
 
@@ -311,7 +311,9 @@ body {
 }
 
 .proj_pics img {
-    width: 30%;
+    width: auto;
+    max-height: 400px;
+    max-width: 30%;
     margin: 1% 1% 40px 1%;
     border-radius: 20px;
 }
