@@ -18,9 +18,10 @@ class Project(models.Model):
     project_name = models.CharField(max_length=100)
     project_descr = models.TextField()
     functionalities = models.TextField(default="")
+    priority = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.project_name
+        return self.project_name + ", " + str(self.priority)
 
 
 class Picture(models.Model):
@@ -37,7 +38,7 @@ class Reference(models.Model):
     reference_project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.reference_name
+        return self.reference_name + ": " + self.reference_project.project_name
 
 
 class Profile(models.Model):

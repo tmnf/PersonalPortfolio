@@ -104,7 +104,7 @@ def skills(request):
 def portfolio(request):
     check_language(request)
     projects = {
-        "projects": Project.objects.all(),
+        "projects": Project.objects.all().order_by('priority'),
         "active": "portfolio"
     }
 

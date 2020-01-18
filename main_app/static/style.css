@@ -314,15 +314,22 @@ body {
     width: auto;
     max-height: 400px;
     max-width: 30%;
-    margin: 1% 1% 40px 1%;
+    margin: 1% 1% 0px 1%;
     border-radius: 20px;
+
+    transition: transform .3s;
+    transform-origin: center center;
+}
+
+.proj_pics img:hover {
+    transform: scale(2.1);
 }
 
 .proj_descr {
     font-size: 16px;
     width: 95%;
     text-align: justify;
-    margin: auto;
+    margin: 40px auto auto auto;
     white-space: pre-wrap;
 }
 
@@ -430,6 +437,11 @@ body {
     .profile_pic img {
         width: 50%;
         margin-bottom: 10px;
+        transition: 0.3s;
+    }
+
+    .profile_pic img:hover {
+        transform: scale(2.1);
     }
 
     .informations {
