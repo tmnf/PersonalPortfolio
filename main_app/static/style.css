@@ -333,13 +333,8 @@ body {
     white-space: pre-wrap;
 }
 
-.proj_funcs {
-    font-size: 16px;
-    font-family: "Bookman Old Style";
-}
-
 .proj_ref {
-    width: 20%;
+    width: 100%;
     margin-left: 5%;
     text-align: left;
     margin-top: 40px;
@@ -360,6 +355,14 @@ body {
 
 .proj_ref a:hover {
     color: blue;
+}
+
+.proj_funcs {
+    font-size: 16px;
+    font-family: "Bookman Old Style";
+    margin: auto;
+    width: 98%;
+    white-space: pre-wrap;
 }
 
 /* RESPONSIVE HANDLE */
