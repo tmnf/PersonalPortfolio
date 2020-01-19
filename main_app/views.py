@@ -9,9 +9,6 @@ from .Utils import CONSTANTS, EmailUtils
 from .Utils import LanguageUtils
 
 
-# Create your views here.
-
-
 def index(request):
     check_language(request)
 
