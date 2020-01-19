@@ -92,6 +92,8 @@ body {
     border-radius: 20px;
 }
 
+/*======================================== MAIN PAGE ========================================*/
+
 .profile_style {
     background-color: #111111aa;
     border-radius: 20px;
@@ -221,6 +223,8 @@ body {
     font-size: 18px;
 }
 
+/*======================================== Contacts PAGE ========================================*/
+
 .contacts_style {
     font-size: 18px;
     background-color: #111111aa;
@@ -257,6 +261,8 @@ body {
     margin-left: auto;
 }
 
+/*======================================== Skills PAGE ========================================*/
+
 .skills_style {
     background-color: #111111aa;
     border-radius: 20px;
@@ -288,6 +294,8 @@ body {
 .other_skills_style {
     margin-top: 50px;
 }
+
+/*======================================== Portfolio PAGE ========================================*/
 
 .project_style {
     text-align: center;
@@ -347,7 +355,7 @@ body {
 
 .proj_ref a {
     text-decoration: none;
-    margin-left: 10%;
+    margin-left: 2%;
     font-size: 18px;
     color: red;
     margin-top: 0px;
@@ -533,7 +541,6 @@ body {
         width: 100%;
         margin: 0;
     }
-
 }
 
 
