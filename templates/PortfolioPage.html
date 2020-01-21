@@ -8,7 +8,11 @@
     {% for proj in projects %}
 
         <section class="project_style">
-            <h2 class="proj_name"> {{ proj.project_name }} </h2>
+            <h2 class="proj_name">
+                <a href="{% url 'project_view' title=proj.project_name %}">
+                    {{ proj.project_name }}
+                </a>
+            </h2>
 
             <picture class="proj_pics">
                 {% for pic in proj.picture_set.all %}

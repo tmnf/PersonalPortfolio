@@ -108,3 +108,15 @@ def portfolio(request):
     projects = {**projects, **LanguageUtils.get_base_words(request)}
 
     return render(request, "PortfolioPage.html", projects)
+
+
+def project(request, title=""):
+    check_language(request)
+    projects = {
+        "proj": Project.objects.get(project_name=title),
+        "active": "portfolio"
+    }
+
+    projects = {**projects, **LanguageUtils.get_base_words(request)}
+
+    return render(request, "ProjectPage.html", projects)

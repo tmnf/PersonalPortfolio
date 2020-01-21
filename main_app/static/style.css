@@ -316,6 +316,15 @@ body {
     font-size: 28px;
 }
 
+.proj_name a {
+    text-decoration: none;
+    color: white;
+}
+
+.proj_name a:hover {
+    color: red;
+}
+
 .proj_pics {
     width: 100%;
 }

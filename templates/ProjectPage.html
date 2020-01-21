@@ -1,0 +1,32 @@
+{% extends "DefaultPage.html" %}
+{% load static %}
+
+{% block title %} {{ portfolio }} {% endblock %}
+
+{% block content %}
+    <section class="project_style">
+        <h2 class="proj_name"> {{ proj.project_name }} </h2>
+
+        <picture class="proj_pics">
+            {% for pic in proj.picture_set.all %}
+                <a href="{{ pic.picture_file.url }}">
+                    <img src="{{ pic.picture_file.url }}" alt="{{ pic.picture_file.url }}">
+                </a>
+            {% endfor %}
+        </picture>
+
+        <pre class="proj_descr">{{ proj.project_descr }}</pre>
+
+        <div class="proj_ref">
+            <h2>Funcionalidades</h2>
+            <pre class="proj_funcs">    {{ proj.functionalities }}</pre>
+
+            {% if proj.reference_set.all %}
+                <h2> {{ references }} </h2>
+                {% for ref in proj.reference_set.all %}
+                    <a target="_blank" href="{{ ref.reference_url }}"> {{ ref.reference_name }} </a>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+{% endblock content %}
