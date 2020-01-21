@@ -16,6 +16,7 @@ body {
 .languages_change {
     text-align: right;
     margin-top: 0;
+    margin-right: 20px;
 }
 
 .languages_change a {
