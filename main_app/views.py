@@ -26,7 +26,7 @@ def index(request):
 
     info = {**info, **LanguageUtils.get_base_words(request)}
 
-    return render(request, "IndexPage.html", info)
+    return render(request, "index.html", info)
 
 
 def check_language(request):
@@ -81,7 +81,7 @@ def contacts(request):
 
     conts = {**conts, **LanguageUtils.get_base_words(request)}
 
-    return render(request, "ContactsPage.html", conts)
+    return render(request, "contacts.html", conts)
 
 
 def skills(request):
@@ -95,7 +95,7 @@ def skills(request):
 
     skill_list = {**skill_list, **LanguageUtils.get_base_words(request)}
 
-    return render(request, "SkillsPage.html", skill_list)
+    return render(request, "skills.html", skill_list)
 
 
 def portfolio(request):
@@ -107,7 +107,7 @@ def portfolio(request):
 
     projects = {**projects, **LanguageUtils.get_base_words(request)}
 
-    return render(request, "PortfolioPage.html", projects)
+    return render(request, "portfolio.html", projects)
 
 
 def project(request, title=""):
@@ -119,4 +119,4 @@ def project(request, title=""):
 
     projects = {**projects, **LanguageUtils.get_base_words(request)}
 
-    return render(request, "ProjectPage.html", projects)
+    return render(request, "project.html", projects)
