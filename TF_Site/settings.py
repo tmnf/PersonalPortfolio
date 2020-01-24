@@ -9,7 +9,7 @@ SECURE_SSL_REDIRECT = False
 with open('/home/tiagomnf/PersonalPortfolio/main_app/static/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
-DEBUG = True
+DEBUG = False
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
@@ -99,6 +99,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+STATIC_ROOT = "/main_app/static/static_local"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "/main_app/static"),
