@@ -1,0 +1,564 @@
+html {
+    background: url("images/back2_1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+    color: white;
+    font-family: "Bookman Old Style";
+    padding-bottom: 100px;
+}
+
+.languages_change {
+    text-align: right;
+    margin-top: 0;
+    margin-right: 20px;
+}
+
+.languages_change a {
+    text-decoration: none;
+    color: white;
+}
+
+.languages_change a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.title h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+.title p {
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.top_menu_bar {
+    border-bottom: solid white 1px;
+    border-top: solid white 1px;
+    margin-bottom: 20px;
+}
+
+.top_menu_bar .icon {
+    display: none;
+}
+
+.top_menu_bar ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.top_menu_bar ul li {
+    font-size: 20px;
+    display: inline;
+}
+
+.top_menu_bar ul li a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.top_menu_bar ul li a:hover {
+    background-color: #222222dd;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: #222222dd;
+    border-radius: 10px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.success_message {
+    width: fit-content;
+    margin: auto auto 20px auto;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ff9900dd;
+    border-radius: 20px;
+}
+
+/*======================================== MAIN PAGE ========================================*/
+
+.profile_style {
+    background-color: #111111aa;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.profile_pic {
+    float: left;
+    width: 15%;
+    margin-right: 20px;
+}
+
+.profile_pic img {
+    border-radius: 20px;
+    border: solid white 1px;
+    width: 100%;
+}
+
+.informations {
+    overflow: hidden;
+}
+
+.informations h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.description {
+    text-align: justify;
+}
+
+.social_skills {
+    background-color: #111111aa;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.social_skills h4 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.social_skills ul li p {
+    font-size: 14px;
+    color: #999999;
+    display: inline-block;
+    margin: 0;
+}
+
+.contact_and_files {
+    background-color: #111111aa;
+    border-radius: 20px;
+    overflow: auto;
+    padding: 20px;
+}
+
+.contact_and_files h4 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.send_message_style {
+    width: 35%;
+    float: left;
+}
+
+.send_message_style input {
+    width: 90%;
+}
+
+.send_message_style input[type=text], input[type=email] {
+    margin-bottom: 5px;
+    border-radius: 10px;
+    font-family: "Bookman Old Style";
+    padding: 5px;
+}
+
+.message_box {
+    font-family: "Bookman Old Style";
+    margin-bottom: 5px;
+    height: 100px;
+    resize: none;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.send_message_style input[type=submit] {
+    width: 94%;
+    height: 30px;
+    border-radius: 10px;
+    font-family: "Bookman Old Style";
+    background-color: #999999cc;
+    border-color: transparent;
+}
+
+.send_message_style input[type=submit]:hover {
+    background-color: #cc0000;
+    cursor: pointer;
+}
+
+.anexos {
+    overflow: hidden;
+    margin: auto;
+}
+
+.downbutt {
+    border-radius: 10px;
+    font-family: "Bookman Old Style";
+    background-color: #999999cc;
+    border-color: transparent;
+    height: 30px;
+    width: 100px;
+}
+
+.downbutt:hover {
+    background-color: #cc0000;
+    cursor: pointer;
+}
+
+.anexos label {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/*======================================== Contacts PAGE ========================================*/
+
+.contacts_style {
+    font-size: 18px;
+    background-color: #111111aa;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+
+.contacts_style a {
+    text-decoration: none;
+    color: #999999;
+}
+
+.contacts_style a:hover {
+    color: blue;
+}
+
+.contacts_style a:active {
+    color: #999999;
+}
+
+.left_contacts {
+    float: left;
+    text-align: center;
+    width: 35%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.right_contacts {
+    overflow: hidden;
+    text-align: center;
+    width: 60%;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/*======================================== Skills PAGE ========================================*/
+
+.skills_style {
+    background-color: #111111aa;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 17px;
+}
+
+.skills_style ul li {
+    margin-bottom: 4px;
+}
+
+.languages_style {
+    float: left;
+    width: 50%;
+}
+
+.languages_style p {
+    font-size: 14px;
+    color: #999999;
+    display: inline-block;
+    margin: 0;
+}
+
+.frameworks_style {
+    overflow: hidden;
+    width: 50%;
+}
+
+.other_skills_style {
+    margin-top: 50px;
+}
+
+/*======================================== Portfolio PAGE ========================================*/
+
+.project_style {
+    text-align: center;
+    background-color: #111111aa;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.proj_name {
+    font-size: 28px;
+}
+
+.proj_name a {
+    text-decoration: none;
+    color: white;
+}
+
+.proj_name a:hover {
+    color: red;
+}
+
+.proj_pics {
+    width: 100%;
+}
+
+.proj_pics a {
+    text-decoration: none;
+    color: transparent;
+}
+
+.proj_pics img {
+    width: auto;
+    max-height: 400px;
+    max-width: 30%;
+    margin: 1% 1% 0px 1%;
+    border-radius: 20px;
+
+    transition: transform .3s;
+    transform-origin: center center;
+}
+
+.proj_pics img:hover {
+    transform: scale(2.1);
+}
+
+.proj_descr {
+    font-size: 16px;
+    width: 95%;
+    text-align: justify;
+    margin: 40px auto auto auto;
+    white-space: pre-wrap;
+}
+
+.proj_ref {
+    width: 100%;
+    margin-left: 5%;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.proj_ref h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.proj_ref a {
+    text-decoration: none;
+    margin-left: 2%;
+    font-size: 18px;
+    color: red;
+    margin-top: 0px;
+}
+
+.proj_ref a:hover {
+    color: blue;
+}
+
+.proj_funcs {
+    font-size: 16px;
+    font-family: "Bookman Old Style";
+    margin: auto;
+    width: 98%;
+    white-space: pre-wrap;
+}
+
+/* RESPONSIVE HANDLE */
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .top_menu_bar.responsive ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top_menu_bar.responsive ul li a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .top_menu_bar.responsive .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .top_menu_bar.responsive .bar2 {
+        opacity: 0;
+    }
+
+    .top_menu_bar.responsive .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .top_menu_bar {
+        overflow: hidden;
+    }
+
+    .top_menu_bar ul li {
+        width: 100%;
+    }
+
+    .top_menu_bar ul li a {
+        display: none;
+    }
+
+    .top_menu_bar .icon {
+        float: right;
+        display: block;
+        cursor: pointer;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .top_menu_bar .icon:hover {
+        background-color: #555555bb;
+        border-radius: 10px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .profile_style {
+        width: 90%;
+    }
+
+    .profile_pic {
+        float: none;
+    }
+
+    .profile_pic img {
+        width: 50%;
+        margin-bottom: 10px;
+        transition: 0.3s;
+    }
+
+    .profile_pic img:hover {
+        transform: scale(2.1);
+    }
+
+    .informations {
+        text-align: left;
+    }
+
+    .informations {
+        margin: 0;
+    }
+
+    .informations h3 {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .social_skills {
+        width: 90%;
+    }
+
+    .contact_and_files {
+        padding: 0;
+        background-color: transparent;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .send_message_style {
+        width: 90%;
+        float: none;
+        background-color: #111111aa;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .anexos {
+        background-color: #111111aa;
+        border-radius: 20px;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .page_normal_title h1 {
+        font-size: 25px;
+    }
+
+    .contacts_style {
+        padding-top: 1px;
+        margin-bottom: 100px;
+    }
+
+    .left_contacts {
+        float: none;
+        width: 100%;
+    }
+
+    .right_contacts {
+        width: 100%;
+    }
+
+    .left_contacts div {
+        padding-bottom: 5px;
+        border-bottom: solid grey 1px;
+    }
+
+    .right_contacts div {
+        padding-bottom: 5px;
+        border-bottom: solid grey 1px;
+    }
+
+    .skills_style {
+    }
+
+    .languages_style {
+        margin: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .frameworks_style {
+        width: 100%;
+        margin: 0;
+    }
+
+    .other_skills_style {
+        width: 100%;
+        margin: 0;
+    }
+
+}
+
+

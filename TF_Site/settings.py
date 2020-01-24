@@ -1,12 +1,21 @@
 import os
+import json
+
+with open('/etc/config.json') as config_file:
+	config = json.load(config_file)
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = "0jh^m0+&i)w8ffb^9yi998a0jg#!_^&v%+0^nfsb_o%)@ok%nr"
+SECRET_KEY = config['SECRET_KEY']
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["34.77.115.39", "localhost", "tiagofarinha-portfolio.com", "www.tiagofarinha-portfolio.com"]
+ALLOWED_HOSTS = ["34.77.115.39", 
+		"localhost", 
+		"tiagofarinha-portfolio.com", 
+		"www.tiagofarinha-portfolio.com"
+		]
 
 # Application definition
 
@@ -89,15 +98,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 # smtp
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'tiago.emnf@gmail.com'
-EMAIL_HOST_PASSWORD = 'ciwxycpsnfabrmiq'
+EMAIL_HOST_USER = config.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = config.get('EMAIL_PASS')
 EMAIL_PORT = 587
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'main_app/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
