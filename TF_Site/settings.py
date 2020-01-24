@@ -1,16 +1,17 @@
 import os
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
+SECURE_SSL_REDIRECT = True
+
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+with open('C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0jh^m0+&i)w8ffb^9yi998a0jg#!_^&v%+0^nfsb_o%)@ok%nr'
+DEBUG = False
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = ["34.77.115.39", "localhost"]
 
@@ -97,6 +98,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "/main_app/static"),
+    "/main_app/static",
+]
 
 STATIC_URL = '/static/'
 
