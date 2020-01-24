@@ -2,9 +2,10 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+# /home/tiagomnf/PersonalPortfolio/main_app/static/secret_key.txt
 with open('C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
