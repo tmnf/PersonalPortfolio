@@ -7,10 +7,9 @@ html {
 
 body {
     height: 100%;
-    overflow: auto;
     color: white;
+    overflow: auto;
     font-family: "Bookman Old Style";
-    padding-bottom: 100px;
 }
 
 .languages_change {
