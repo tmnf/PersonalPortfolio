@@ -9,7 +9,7 @@ SECURE_SSL_REDIRECT = False
 with open('/home/tiagomnf/PersonalPortfolio/main_app/static/main_app/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
-DEBUG = False
+DEBUG = True
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
@@ -106,7 +106,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "main_app/static"),
 ]
 
-STATIC_URL = '/home/tiagomnf/PersonalPortfolio/static_local/'
+STATIC_URL = '/static/'
 
 # smtp
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
