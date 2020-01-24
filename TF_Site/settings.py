@@ -8,9 +8,10 @@ SECURE_SSL_REDIRECT = False
 # C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt
 
 
-SECRET_KEY = "0jh^m0+&i)w8ffb^9yi998a0jg#!_^&v%+0^nfsb_o%)@ok%nr"
+with open("../main_app/static/main_app/secret_key.txt") as f
+    SECRET_KEY = f.read().strip()
 
-DEBUG = True
+DEBUG = False
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
