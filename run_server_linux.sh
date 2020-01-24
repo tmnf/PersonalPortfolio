@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "A ligar servidor!"
-nohup python3 manage.py 0.0.0.0:80 >> log.txt &
+python3 manage.py 0.0.0.0:80 >> log.txt
