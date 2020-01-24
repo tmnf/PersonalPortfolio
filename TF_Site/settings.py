@@ -6,8 +6,9 @@ SECURE_SSL_REDIRECT = False
 
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 # C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt
-with open('/home/tiagomnf/PersonalPortfolio/main_app/static/main_app/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+
+
+SECRET_KEY = "0jh^m0+&i)w8ffb^9yi998a0jg#!_^&v%+0^nfsb_o%)@ok%nr"
 
 DEBUG = True
 
@@ -96,15 +97,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATIC_ROOT = "/home/tiagomnf/PersonalPortfolio/static_local"
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "main_app/static"),
-]
 
 STATIC_URL = '/static/'
 
