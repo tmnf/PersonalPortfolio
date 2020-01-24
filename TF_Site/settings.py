@@ -5,8 +5,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECURE_SSL_REDIRECT = False
 
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-# /home/tiagomnf/PersonalPortfolio/main_app/static/secret_key.txt
-with open('C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt') as f:
+# C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt
+with open('/home/tiagomnf/PersonalPortfolio/main_app/static/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 DEBUG = False
@@ -14,7 +14,7 @@ DEBUG = False
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = ["34.77.115.39", "localhost"]
+ALLOWED_HOSTS = ["34.77.115.39", "localhost", "tiagofarinha-portfolio.com", "www.tiagofarinha-portfolio.com"]
 
 # Application definition
 
