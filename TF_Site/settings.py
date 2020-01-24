@@ -17,6 +17,9 @@ ALLOWED_HOSTS = ["34.77.115.39",
 		"www.tiagofarinha-portfolio.com"
 		]
 
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+
 # Application definition
 
 INSTALLED_APPS = [
