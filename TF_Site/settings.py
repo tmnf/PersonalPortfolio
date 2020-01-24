@@ -9,7 +9,7 @@ SECURE_SSL_REDIRECT = False
 with open('/home/tiagomnf/PersonalPortfolio/main_app/static/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
-DEBUG = False
+DEBUG = True
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
