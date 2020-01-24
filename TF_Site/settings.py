@@ -8,7 +8,7 @@ SECURE_SSL_REDIRECT = False
 # C:\ImportantDocs\CodingProjects\TF_Site\main_app\static\secret_key.txt
 
 
-with open("../main_app/static/main_app/secret_key.txt") as f:
+with open("/home/tiagomnf/PersonalPortfolio/main_app/static/main_app/secret_key.txt") as f:
     SECRET_KEY = f.read().strip()
 
 DEBUG = False
