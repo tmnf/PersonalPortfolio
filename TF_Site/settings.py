@@ -106,7 +106,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "main_app/static"),
 ]
 
-STATIC_URL = '/home/tiagomnf/PersonalPortfolio/static_local'
+STATIC_URL = '/home/tiagomnf/PersonalPortfolio/static_local/'
 
 # smtp
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
