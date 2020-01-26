@@ -87,6 +87,7 @@ body {
 .container {
     width: 80%;
     margin: auto;
+    padding-bottom: 100px;
 }
 
 .success_message {
@@ -97,6 +98,22 @@ body {
     text-align: center;
     background-color: #ff9900dd;
     border-radius: 20px;
+}
+
+/*======================================== ERROR PAGE ========================================*/
+
+.error_style {
+    background-color: #ff9900dd;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.error_image img {
+
+}
+
+.error_text {
+    
 }
 
 /*======================================== MAIN PAGE ========================================*/

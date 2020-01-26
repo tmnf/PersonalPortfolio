@@ -1,9 +1,8 @@
-import os
 import json
+import os
 
 with open('/etc/config.json') as config_file:
-	config = json.load(config_file)
-
+    config = json.load(config_file)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -11,11 +10,11 @@ SECRET_KEY = config['SECRET_KEY']
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["34.77.115.39", 
-		"localhost", 
-		"tiagofarinha-portfolio.com", 
-		"www.tiagofarinha-portfolio.com"
-		]
+ALLOWED_HOSTS = ["34.77.115.39",
+                 "localhost",
+                 "tiagofarinha-portfolio.com",
+                 "www.tiagofarinha-portfolio.com"
+                 ]
 
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True

@@ -1,0 +1,20 @@
+{% extends "DefaultPage.html" %}
+{% load static %}
+
+{% block title %} {{ portfolio }} {% endblock %}
+
+{% block content %}
+    <section class="error_style">
+        <picture class="error_image">
+            <img src="{% static "main_app/images/profile.jpg" %}">
+        </picture>
+
+        <div class="error_text">
+            <h1> Ups... Something went wrong...</h1>
+            <p> Please check the link you're trying to access or navigate to
+                <a href="{% url 'portfolio_view' %}">this page</a>
+                to see all projects
+            </p>
+        </div>
+    </section>
+{% endblock content %}
