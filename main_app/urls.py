@@ -14,5 +14,5 @@ urlpatterns = [
                   path('lg/', views.change_lang, name='change_lang_view'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'views.error'
-handler500 = views.error
+handler404 = 'main_app.views.error'
+handler500 = 'main_app.views.error'
