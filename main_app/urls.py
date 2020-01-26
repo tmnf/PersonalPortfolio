@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import handler500, handler404
 from django.urls import path
 
 from . import views
