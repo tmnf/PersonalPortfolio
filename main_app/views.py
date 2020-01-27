@@ -120,7 +120,3 @@ def project(request, title=""):
     projects = {**projects, **LanguageUtils.get_base_words(request)}
 
     return render(request, "project.html", projects)
-
-
-def error(request):
-    return render(request, "error.html")
