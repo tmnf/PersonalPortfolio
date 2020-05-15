@@ -1,11 +1,11 @@
 import json
 import os
 
-# FILE_PATH = '/etc/config.json'
-# DEV = False
+FILE_PATH = '/etc/config.json'
+DEV = False
 
-FILE_PATH = 'config.json'
-DEV = True
+#FILE_PATH = 'config.json'
+#DEV = True
 
 with open(FILE_PATH) as config_file:
     config = json.load(config_file)
