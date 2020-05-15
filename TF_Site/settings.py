@@ -18,9 +18,6 @@ SECRET_KEY = config['SECRET_KEY']
 DEBUG = DEV
 
 ALLOWED_HOSTS = ["34.77.115.39",
-                 "192.168.1.68",
-                 "localhost",
-                 "127.0.0.1",
                  "tiagofarinha-portfolio.com",
                  "www.tiagofarinha-portfolio.com"
                  ]
