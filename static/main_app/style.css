@@ -33,10 +33,16 @@ body {
     margin-bottom: 0;
 }
 
-.title h1 {
+.title a {
     font-size: 50px;
     margin-bottom: 0px;
     margin-top: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.title a:hover {
+    color: red;
 }
 
 .title p {
@@ -390,7 +396,43 @@ body {
     white-space: pre-wrap;
 }
 
-/* RESPONSIVE HANDLE */
+/*======================================== Portfolio PAGE ========================================*/
+
+.downloads_container {
+    background-color: #111111aa;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.download_box {
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+
+    transition: transform .3s;
+    transform-origin: center center;
+}
+
+.download_box:hover {
+    transform: scale(1.2);
+}
+
+.download_image {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.download_name {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px
+}
 
 @media (max-width: 600px) {
     .container {
@@ -557,6 +599,18 @@ body {
     .other_skills_style {
         width: 100%;
         margin: 0;
+    }
+
+    .proj_pics img:hover {
+        transform: none;
+    }
+
+    .downloads_container {
+        grid-template-columns: auto;
+    }
+
+    .download_box:hover {
+        transform: none;
     }
 
 }
