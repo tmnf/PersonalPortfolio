@@ -4,6 +4,7 @@ import os
 FILE_PATH = '/etc/config.json'
 DEV = False
 
+# Debug Mode
 #FILE_PATH = 'config.json'
 #DEV = True
 
