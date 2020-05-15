@@ -1,0 +1,16 @@
+{% extends "DefaultPage.html" %}
+{% load static %}
+
+{% block title %} Downloads - TF {% endblock %}
+
+{% block content %}
+    <section class="downloads_container">
+        {% for download in downloads %}
+            <a class="download_box" href="{{ download.file.url }}" title="{{ download.descr }}" download>
+                <img class="download_image" src="{{ download.pic.url }}" alt="{{ download.name }}">
+                <h2 class="download_name"> {{ download.name }} </h2>
+            </a>
+        {% endfor %}
+    </section>
+
+{% endblock content %}

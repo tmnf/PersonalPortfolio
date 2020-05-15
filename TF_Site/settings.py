@@ -1,23 +1,31 @@
 import json
 import os
 
-with open('/etc/config.json') as config_file:
+# FILE_PATH = '/etc/config.json'
+# DEV = False
+
+FILE_PATH = 'config.json'
+DEV = True
+
+with open(FILE_PATH) as config_file:
     config = json.load(config_file)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = config['SECRET_KEY']
 
-DEBUG = False
+DEBUG = DEV
 
 ALLOWED_HOSTS = ["34.77.115.39",
+                 "192.168.1.68",
                  "localhost",
+                 "127.0.0.1",
                  "tiagofarinha-portfolio.com",
                  "www.tiagofarinha-portfolio.com"
                  ]
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = not DEV
+SESSION_COOKIE_SECURE = not DEV
 
 # Application definition
 

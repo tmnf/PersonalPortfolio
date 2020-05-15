@@ -70,6 +70,16 @@ class File(models.Model):
         return self.label
 
 
+class Download(models.Model):
+    name = models.CharField(max_length=100)
+    descr = models.TextField(default="")
+    file = models.FileField(upload_to="./main_app/files")
+    pic = models.ImageField(upload_to="./main_app/media", null=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Languages(models.Model):
     name = models.CharField(max_length=100)
     level = models.CharField(max_length=100)

@@ -26,7 +26,7 @@
 <body>
 <header>
     <section class="title">
-        <h1> Tiago Farinha </h1>
+        <a href="{% url 'home_view' %}"> Tiago Farinha </a>
         <p> {{ curr_job }} </p>
     </section>
 
@@ -53,6 +53,9 @@
             <li><a {% if active == 'contacts' %} class="active" {% endif %} href="{% url 'contacts_view' %}">
                 {{ contacts }} </a>
             </li>
+            <li><a {% if active == 'downloads' %} class="active" {% endif %} href="{% url 'downloads_view' %}">
+                Downloads </a>
+            </li>
             <div class="icon" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
@@ -65,6 +68,7 @@
 <section class="container">
     {% block content %}{% endblock content %}
 </section>
+
 </body>
 
 <script>

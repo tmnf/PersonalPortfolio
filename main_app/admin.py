@@ -4,6 +4,7 @@ from . import models
 
 # Register your models here.
 
+admin.site.register(models.Download)
 admin.site.register(models.Contact)
 admin.site.register(models.Picture)
 admin.site.register(models.Project)

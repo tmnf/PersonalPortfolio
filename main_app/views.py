@@ -4,7 +4,8 @@ from dateutil.relativedelta import relativedelta
 from django.contrib import messages
 from django.shortcuts import render, redirect
 
-from main_app.models import Contact, Project, Profile, File, Languages, Frameworks, OtherSkills, SpokenLanguage
+from main_app.models import Contact, Project, Profile, File, Languages, Frameworks, OtherSkills, SpokenLanguage, \
+    Download
 from .Utils import CONSTANTS, EmailUtils
 from .Utils import LanguageUtils
 
@@ -96,6 +97,15 @@ def skills(request):
     skill_list = {**skill_list, **LanguageUtils.get_base_words(request)}
 
     return render(request, "skills.html", skill_list)
+
+
+def downloads(request):
+    check_language(request)
+
+    downs = Download.objects.all()
+
+    return render(request, "downloads.html",
+                  {'active': 'downloads', 'downloads': downs, **LanguageUtils.get_base_words(request)})
 
 
 def portfolio(request):
