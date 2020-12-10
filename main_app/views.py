@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from datetime import date
 
 from dateutil.relativedelta import relativedelta
@@ -8,6 +9,8 @@ from main_app.models import Contact, Project, Profile, File, Languages, Framewor
     Download
 from .Utils import CONSTANTS, EmailUtils
 from .Utils import LanguageUtils
+
+import subprocess
 
 
 def index(request):
@@ -130,3 +133,10 @@ def project(request, title=""):
     projects = {**projects, **LanguageUtils.get_base_words(request)}
 
     return render(request, "project.html", projects)
+
+
+def server_temp(request):
+    temp = subprocess.run(["vcgencmd measure_temp | cut -d '=' -f2"], stdout=subprocess.PIPE)
+    temp = temp.stdout
+
+    return JsonResponse({'temp': temp})

@@ -13,4 +13,5 @@ urlpatterns = [
                   path('project/<str:title>', views.project, name='project_view'),
                   path('email/', views.send_email, name='send_email_view'),
                   path('lg/', views.change_lang, name='change_lang_view'),
+                  path('temp/', views.server_temp, name='server_temp'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
