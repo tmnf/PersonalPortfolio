@@ -136,7 +136,7 @@ def project(request, title=""):
 
 
 def server_temp(request):
-    temp = subprocess.run(["vcgencmd measure_temp | cut -d '=' -f2"], stdout=subprocess.PIPE)
+    temp = subprocess.run(["sh", "./home/pi/scripts/temp.sh"], stdout=subprocess.PIPE)
     temp = temp.stdout
 
     return JsonResponse({'temp': temp})
