@@ -10,7 +10,7 @@ from main_app.models import Contact, Project, Profile, File, Languages, Framewor
 from .Utils import CONSTANTS, EmailUtils
 from .Utils import LanguageUtils
 
-import subprocess
+import subprocess, re
 
 
 def index(request):
@@ -136,7 +136,10 @@ def project(request, title=""):
 
 
 def server_temp(request):
-    temp = subprocess.run(["sh", "./home/pi/scripts/temp.sh"], stdout=subprocess.PIPE)
-    temp = temp.stdout
+    cmd = ['cat', '/sys/class/thermal/thermal_zone0/temp']
+    temp = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    temp, error = temp.communicate()
+    temp = float(re.sub('[^0-9]','', str(temp))) / 1000
 
     return JsonResponse({'temp': temp})
