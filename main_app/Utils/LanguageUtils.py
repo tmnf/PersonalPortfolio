@@ -1,7 +1,7 @@
 def get_base_words(request):
     if request.session['lang'] == 'en':
         main_page = 'Home Page'
-        curr_job = 'Computer Science Student'
+        curr_job = "Software Engineer / Master's Computer Science Student"
         home = 'Home'
         porfolio = 'Portfolio'
         skills = 'Technical Skills'
@@ -20,7 +20,7 @@ def get_base_words(request):
         phone_text = 'Phone'
     else:
         main_page = 'Página Inicial'
-        curr_job = 'Estudante de Engenharia Informática'
+        curr_job = 'Engenheiro de Software / Aluno de Mestrado em Engenharia Informática'
         home = 'Início'
         porfolio = 'Portfólio'
         skills = 'Competências Técnicas'
