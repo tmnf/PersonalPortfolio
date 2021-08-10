@@ -17,7 +17,7 @@ SECRET_KEY = config['SECRET_KEY']
 
 DEBUG = DEV
 
-ALLOWED_HOSTS = ['93.108.138.171', '127.0.0.1', '192.168.1.162', 'raspberrypi', 'www.tiagofarinha.pt',
+ALLOWED_HOSTS = ['188.82.96.118', '127.0.0.1', '192.168.1.83', 'raspberrypi', 'www.tiagofarinha.pt',
                  'tiagofarinha.pt']
 
 SECURE_SSL_REDIRECT = not DEV
