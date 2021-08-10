@@ -5,7 +5,7 @@ FILE_PATH = '/etc/config.json'
 DEV = False
 
 # Debug Mode
-# FILE_PATH = 'config.json'
+FILE_PATH = 'config.json'
 DEV = True
 
 with open(FILE_PATH) as config_file:
@@ -17,7 +17,8 @@ SECRET_KEY = config['SECRET_KEY']
 
 DEBUG = DEV
 
-ALLOWED_HOSTS = ['93.108.138.171','127.0.0.1','192.168.1.162','raspberrypi','www.tiagofarinha.pt','tiagofarinha.pt']
+ALLOWED_HOSTS = ['93.108.138.171', '127.0.0.1', '192.168.1.162', 'raspberrypi', 'www.tiagofarinha.pt',
+                 'tiagofarinha.pt']
 
 SECURE_SSL_REDIRECT = not DEV
 SESSION_COOKIE_SECURE = not DEV
